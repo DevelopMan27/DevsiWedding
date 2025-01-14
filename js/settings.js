@@ -58,10 +58,10 @@
 	  $(this).replaceWith($('<ol>'+$(this).html()+'</ol>'))
 	})
 	//responsive
-	$('.nicdark_menu').tinyNav({
-		active: 'selected',
-		header: 'MENU'
-	});
+	// $('.nicdark_menu').tinyNav({
+	// 	active: 'selected',
+	// 	header: 'MENU'
+	// });
 	///////////
 
 
