@@ -247,8 +247,7 @@
             <!--end section-->
 
             <!--start counter-->
-            <section id="section_nicdark_couple" class="nicdark_section nicdark_bg_gradient">
-                <!--start nicdark_container-->
+            <!-- <section id="section_nicdark_couple" class="nicdark_section nicdark_bg_gradient">
                 <div class="nicdark_container nicdark_clearfix">
 
                     <div
@@ -287,9 +286,42 @@
                     </div>
 
                 </div>
+            </section> -->
+            <!--end counter-->
+
+            <section id="section_nicdark_couple" class="nicdark_section nicdark_bg_gradient">
+                <!--start nicdark_container-->
+                <div class="nicdark_container nicdark_clearfix">
+                    <div
+                        class="grid grid_4 percentage nomargin nicdark_displaynone_ipadpotr nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr">
+                        <div class="nicdark_focus">
+                            <div class="nicdark_space50"></div>
+                            <div class="nicdark_textevidence">
+                                <div class="nicdark_textevidence nicdark_relative">
+                                    <h1 class="extrasize nicdark_displaynone_ipadpotr">
+                                        <a href="#" class="nicdark_btn_icon white nicdark_absolute">
+                                            <i class="nicdark_icon-rings"></i>
+                                        </a>
+                                    </h1>
+                                    <div class="nicdark_activity nicdark_marginleft70">
+                                        <h3 class="white">MISSING DAYS TO</h3>
+                                        <div class="nicdark_space10"></div>
+                                        <div class="nicdark_space5"></div>
+                                        <h1 class="white"><strong>OUR WEDDING</strong></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid_8 percentage nomargin nicdark_width100_ipadpotr">
+                        <div class="nicdark_focus center">
+                            <div id="countdown" class="nicdark_focus nicdark_countdown_inline"></div>
+                        </div>
+                    </div>
+                </div>
                 <!--end container-->
             </section>
-            <!--end counter-->
+
 
             <!--start img couples-->
             <section id="nicdark_parallax_1" class="nicdark_section"
@@ -1617,6 +1649,33 @@
 
     <!--custom js-->
     <script type="text/javascript">
+        const targetDate = new Date('2025-02-04T00:00:00').getTime();
+
+        // Update the countdown every second
+        const countdownInterval = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById('countdown').innerHTML = `
+        <h1 class="white"><strong>${days}</strong> Days</h1>
+        <h2 class="white">${hours} Hours : ${minutes} Minutes : ${seconds} Seconds</h2>
+    `;
+
+            // If the countdown is over, display a message
+            if (timeLeft < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = `
+            <h1 class="white"><strong>It's Our Wedding Day!</strong></h1>
+        `;
+            }
+        }, 1000);
         jQuery(document).ready(function () {
 
             //START SLIDE
