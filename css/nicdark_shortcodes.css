@@ -365,7 +365,7 @@ transform: skew(20deg)translate(-10px);
 .nicdark_tab > .nicdark_tabslist{ margin: 0px; padding: 0px; list-style: none; float: left; width: 100%; }
 .nicdark_tab > .nicdark_tabslist > li{ margin: 0px; padding: 0px; float: left; }
 .nicdark_tab > .nicdark_tabslist > li > a{ outline: 0; display: block; }
-.nicdark_tab > .nicdark_tabslist > .ui-tabs-active > a{ background-color: #ffffff !important; color: #b7b7b7 !important; box-shadow: 0px 0px 0px 0px #eeeeee; }
+.nicdark_tab > .nicdark_tabslist > .ui-tabs-active > a{ background-color: #ffffff !important; color: #2c2323 !important; box-shadow: 0px 0px 0px 0px #eeeeee; }
 .nicdark_tab > .nicdark_tabslist.greydark > .ui-tabs-active > a{ background-color: #585858 !important; color: #fff !important; box-shadow: 0px 0px 0px 0px #eeeeee; }
 /*END NICDARKTABS*/
 
@@ -437,7 +437,7 @@ transform: skew(20deg)translate(-10px);
 
 
 /*START NICDARK PRELOADER*/
-.nicdark_preloader{ float: left; width: 100%; height: 100%; position: fixed; background-color: #fff; display: table; z-index: 10001; text-align: center; }
+.nicdark_preloader{ float: left; width: 100%; height: 100%; position: fixed; background-color: #ceafb5; display: table; z-index: 10001; text-align: center; }
 .nicdark_preloader i{ display: table-cell; vertical-align: middle; font-size: 30px; -webkit-animation: nicdark_pulse 1s infinite linear; animation: nicdark_pulse 1s infinite linear; }
 
 @-webkit-keyframes nicdark_spin {
